@@ -21,7 +21,8 @@ public class spawnGameObject : MonoBehaviour {
         {
             time = 0;
             numberOfSpawns++;
-            GameObject.Instantiate(gameObjectToSpawn, new Vector3(0, numberOfSpawns, 0), new Quaternion());
+            GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(1.0f,1.5f), 1.5f, Random.Range(-1.5f, 1.5f)), new Quaternion());
+            
         }
 	}
 }

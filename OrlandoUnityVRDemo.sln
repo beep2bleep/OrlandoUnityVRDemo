@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrlandoUnityVRDemo", "OrlandoUnityVRDemo.csproj", "{D5117A63-9A3A-2C16-9C42-338B063A893B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrlandoUnityVRDemo.Editor", "OrlandoUnityVRDemo.Editor.csproj", "{69C51EC0-BDC9-03E2-1292-06E1C9CF8C05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5117A63-9A3A-2C16-9C42-338B063A893B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5117A63-9A3A-2C16-9C42-338B063A893B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5117A63-9A3A-2C16-9C42-338B063A893B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5117A63-9A3A-2C16-9C42-338B063A893B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C51EC0-BDC9-03E2-1292-06E1C9CF8C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C51EC0-BDC9-03E2-1292-06E1C9CF8C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C51EC0-BDC9-03E2-1292-06E1C9CF8C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C51EC0-BDC9-03E2-1292-06E1C9CF8C05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
