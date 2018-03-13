@@ -6,6 +6,7 @@ public class KillSelfAtTimeS : MonoBehaviour {
 
     public float timeToDie = 5;
     private float timeSinceSpawn = 0;
+    private float iterations = 0;
 
     // Use this for initialization
     void Start()
@@ -14,12 +15,17 @@ public class KillSelfAtTimeS : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timeSinceSpawn += Time.deltaTime;
-        if (timeSinceSpawn > timeToDie)
+        timeSinceSpawn += Time.fixedDeltaTime;
+        iterations++;
+        if (iterations % 9 == 0)
         {
-            GameObject.Destroy(this.gameObject);
+            
+            if (timeSinceSpawn > timeToDie)
+            {
+                GameObject.Destroy(this.gameObject);
+            }
         }
     }
 }

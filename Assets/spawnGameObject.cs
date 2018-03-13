@@ -8,21 +8,26 @@ public class spawnGameObject : MonoBehaviour {
     public float timeBetweenSpawns = 3.0f;
     public GameObject gameObjectToSpawn;
     private int numberOfSpawns=0;
+    private float iterations = 0;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        time += Time.deltaTime;
-        if(time > timeBetweenSpawns)
+	void FixedUpdate () {
+        time += Time.fixedDeltaTime;
+        iterations++;
+        if (iterations % 9 == 0)
         {
-            time = 0;
-            numberOfSpawns++;
-            GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(1.0f,1.5f), 1.5f, Random.Range(-1.5f, 1.5f)), new Quaternion());
-            
+            if (time > timeBetweenSpawns)
+            {
+                time = 0;
+                numberOfSpawns++;
+                GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(1.0f, 1.5f), 1.5f, Random.Range(-1.5f, 1.5f)), new Quaternion());
+
+            }
         }
 	}
 }
