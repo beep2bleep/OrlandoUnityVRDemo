@@ -14,6 +14,5 @@ public class MoveTowardsGameObject : MonoBehaviour {
             rigidBody2.AddRelativeForce(new Vector3(0, 0, -30));
 
         }
-
-
+    
     }
