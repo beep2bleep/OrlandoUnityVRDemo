@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawnGameObject : MonoBehaviour {
 
     private float time;
-    public float timeBetweenSpawns = 3.0f;
+    public float timeBetweenSpawns = 1.0f;
     public GameObject gameObjectToSpawn;
     private int numberOfSpawns=0;
     private float iterations = 0;
@@ -25,7 +25,7 @@ public class spawnGameObject : MonoBehaviour {
             {
                 time = 0;
                 numberOfSpawns++;
-                GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(-1.5f, 1.5f), 1.5f, Random.Range(1.0f, 1.5f)), new Quaternion());
+                GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(-1.0f, 1.0f), 1.5f, Random.Range(1.0f, 1.5f)), new Quaternion());
 
             }
         }

@@ -348,6 +348,7 @@
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\KillSelfAtTime.cs" />
     <Compile Include="Assets\KillSelfAtTimeS.cs" />
+    <Compile Include="Assets\MoveInNegY.cs" />
     <Compile Include="Assets\MoveToObjectStop.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
@@ -465,6 +466,8 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+    <Compile Include="Assets\TimeLeft.cs" />
+    <Compile Include="Assets\TimeLeft2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
