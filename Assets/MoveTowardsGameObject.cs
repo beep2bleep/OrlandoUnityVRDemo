@@ -10,7 +10,7 @@ public class MoveTowardsGameObject : MonoBehaviour {
         void Start()
         {
             transform.LookAt(target);
-            var rigidBody2 = GetComponent<Rigidbody>();// this.rigidbody;
+            var rigidBody2 = GetComponent<Rigidbody>();
             rigidBody2.AddRelativeForce(new Vector3(0, 0, -30));
 
         }
