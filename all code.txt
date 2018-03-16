@@ -4,14 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class AddScore : MonoBehaviour {
-
     private Text scoreText;
 
     private void Start()
     {
         scoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (scoreText == null)
@@ -23,8 +21,6 @@ public class AddScore : MonoBehaviour {
 
     }
 }
-
-
 
 
 using System.Collections;
@@ -53,8 +49,6 @@ public class KillSelfAtTime : MonoBehaviour {
 }
 
 
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -69,12 +63,9 @@ public class MoveTowardsGameObject : MonoBehaviour {
             transform.LookAt(target);
             var rigidBody2 = GetComponent<Rigidbody>();
             rigidBody2.AddRelativeForce(new Vector3(0, 0, -30));
-
-        }
-    
+        }    
     }
-	
-	
+
 	
 	
 using System.Collections;
@@ -111,7 +102,6 @@ public class SpawnCubes : MonoBehaviour {
 }
 
 
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -135,6 +125,5 @@ public class TimeLeft : MonoBehaviour {
 
     }
 }
-
 	
 	
