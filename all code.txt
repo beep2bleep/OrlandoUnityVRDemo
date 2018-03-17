@@ -1,0 +1,140 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AddScore : MonoBehaviour {
+
+    private Text scoreText;
+
+    private void Start()
+    {
+        scoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (scoreText == null)
+            return;
+        var score = int.Parse(scoreText.text);
+        score++;
+        scoreText.text = score.ToString();
+        GameObject.Destroy(this.gameObject);
+
+    }
+}
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class KillSelfAtTime : MonoBehaviour {
+
+    public float timeToDie = 5;
+    private float timeSinceSpawn = 0;
+    private float iterations = 0;
+    
+    void FixedUpdate()
+    {
+        timeSinceSpawn += Time.fixedDeltaTime;
+        iterations++;
+        if (iterations % 9 == 0)
+        {
+
+            if (timeSinceSpawn > timeToDie)
+            {
+                GameObject.Destroy(this.gameObject);
+            }
+        }
+    }
+}
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveTowardsGameObject : MonoBehaviour {
+
+        public Transform target;
+
+        // Use this for initialization
+        void Start()
+        {
+            transform.LookAt(target);
+            var rigidBody2 = GetComponent<Rigidbody>();
+            rigidBody2.AddRelativeForce(new Vector3(0, 0, -30));
+
+        }
+    
+    }
+	
+	
+	
+	
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnCubes : MonoBehaviour {
+
+    private float time;
+    public float timeBetweenSpawns = .5f;
+    public GameObject gameObjectToSpawn;
+    private float iterations = 0;
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+    
+    void FixedUpdate()
+    {
+        time += Time.fixedDeltaTime;
+        iterations++;
+        if (iterations % 9 == 0)
+        {
+            if (time > timeBetweenSpawns)
+            {
+                time = 0;
+                GameObject.Instantiate(gameObjectToSpawn, new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(.75f, 1.75f), Random.Range(1.0f, 1.5f)), new Quaternion());
+                timeBetweenSpawns = timeBetweenSpawns * .95f;
+            }
+        }
+    }
+}
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class TimeLeft : MonoBehaviour {
+
+    public float timeToPlay = 40;
+    public Text timeLeft;
+    public float timeAtGameOver = 0;
+    
+    void FixedUpdate()
+    {
+        timeToPlay -= Time.fixedDeltaTime;
+        timeLeft.text = timeToPlay.ToString("0.0");
+        if (timeToPlay < 0)
+        {
+            Time.timeScale = 0;
+            timeAtGameOver = Time.unscaledTime;
+        }
+
+    }
+}
+
+	
+	
